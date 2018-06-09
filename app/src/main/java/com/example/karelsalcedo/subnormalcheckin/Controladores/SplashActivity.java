@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
         Timer();
     }
 
-    
+
 
     private void Timer() {
         new Handler().postDelayed(new Runnable() {

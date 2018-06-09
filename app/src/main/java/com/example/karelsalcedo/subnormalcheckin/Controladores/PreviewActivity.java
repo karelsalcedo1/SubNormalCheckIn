@@ -41,9 +41,14 @@ public class PreviewActivity extends AppCompatActivity implements ZXingScannerVi
         String Resultado;
         Resultado = result.getText();
         datosInvitado.setResultado(Resultado);
+        Intent intent = new Intent(PreviewActivity.this, ReviewActivity.class);
+        startActivity(intent);
+        //Función para servidor.
+        /*
         String type = "CheckIn";
         BWGetData bwGetData = new BWGetData(context, datosInvitado);
         bwGetData.execute(type);
+        */
     }
 
     @Override
@@ -56,5 +61,20 @@ public class PreviewActivity extends AppCompatActivity implements ZXingScannerVi
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);
         mScannerView.startCamera();
+    }
+
+    public void Settings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void checkdata(View view) {
+        Intent intent = new Intent(this, DataActivity.class);
+        startActivity(intent);
+    }
+
+    public void about(View view) {
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
     }
 }

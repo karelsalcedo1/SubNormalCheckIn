@@ -5,6 +5,25 @@ public class DatosInvitado {
     private static String Nombre;
     private static String Tipo_Acceso;
     private static String Foto;
+    private static String Evento;
+    private static boolean Asistencia = false;
+
+    public static boolean isAsistencia() {
+        return Asistencia;
+    }
+
+    public static void setAsistencia(boolean asistencia) {
+        Asistencia = asistencia;
+    }
+
+    public static String getEvento() {
+        return Evento;
+    }
+
+    public static void setEvento(String evento) {
+        Evento = evento;
+    }
+
     private boolean Acceso;
 
     public String getResultado() {
