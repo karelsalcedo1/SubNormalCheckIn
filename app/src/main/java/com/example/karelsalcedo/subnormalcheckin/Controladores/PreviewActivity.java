@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.karelsalcedo.subnormalcheckin.CheckOk;
 import com.example.karelsalcedo.subnormalcheckin.Modelo.DatosInvitado;
 import com.example.karelsalcedo.subnormalcheckin.R;
 import com.google.zxing.Result;
@@ -28,8 +30,11 @@ public class PreviewActivity extends AppCompatActivity implements ZXingScannerVi
     }
 
     public void help(View view) {
+        /*
         Intent intent = new Intent(PreviewActivity.this, HelpActivity.class);
         startActivity(intent);
+        */
+        Toast.makeText(context, "Contenido no disponible...", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -41,7 +46,7 @@ public class PreviewActivity extends AppCompatActivity implements ZXingScannerVi
         String Resultado;
         Resultado = result.getText();
         datosInvitado.setResultado(Resultado);
-        Intent intent = new Intent(PreviewActivity.this, ReviewActivity.class);
+        Intent intent = new Intent(PreviewActivity.this, CheckOk.class);
         startActivity(intent);
         //Función para servidor.
         /*
@@ -64,17 +69,26 @@ public class PreviewActivity extends AppCompatActivity implements ZXingScannerVi
     }
 
     public void Settings(View view) {
+        /*
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+        */
+        Toast.makeText(context, "Contenido no disponible...", Toast.LENGTH_SHORT).show();
     }
 
     public void checkdata(View view) {
+        /*
         Intent intent = new Intent(this, DataActivity.class);
         startActivity(intent);
+        */
+        Toast.makeText(context, "Contenido no disponible...", Toast.LENGTH_SHORT).show();
     }
 
     public void about(View view) {
+        /*
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
+        */
+        Toast.makeText(context, "Contenido no disponible...", Toast.LENGTH_SHORT).show();
     }
 }

@@ -35,11 +35,13 @@ public class ReviewActivity extends AppCompatActivity {
 
     private void getData(){
         DatosInvitado datosInvitado = new DatosInvitado();
+        /*
         String[] parts = datosInvitado.getResultado().split("-");
         datosInvitado.setNombre(parts[0]);
         datosInvitado.setTipo_Acceso(parts[1]);
         Nombre.setText(datosInvitado.getNombre());
         Acceso.setText(datosInvitado.getTipo_Acceso());
+        */
 
     }
 

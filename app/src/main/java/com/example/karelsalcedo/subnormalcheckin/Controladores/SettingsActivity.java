@@ -3,28 +3,37 @@ package com.example.karelsalcedo.subnormalcheckin.Controladores;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.karelsalcedo.subnormalcheckin.R;
 
 public class SettingsActivity extends AppCompatActivity {
     Switch SwNormal, SwServer;
+    Toolbar barramenu;
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         SwNormal = (Switch)findViewById(R.id.switch1);
         SwServer = (Switch)findViewById(R.id.switch2);
+        barramenu = (Toolbar)findViewById(R.id.toolbar);
+
+
     }
 
     public void CKsinServer(View view) {
